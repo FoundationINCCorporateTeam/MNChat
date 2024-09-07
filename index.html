@@ -25,7 +25,7 @@
             text-align: center;
         }
         #chat-body {
-            height: calc(100% - 60px);
+            height: calc(100% - 60px); /* Adjusted height to account for header and footer */
             padding: 10px;
             overflow-y: auto;
         }
@@ -33,6 +33,10 @@
             border-top: 1px solid #ccc;
             padding: 10px;
             background: #f9f9f9;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         #chat-input {
             width: 100%;
