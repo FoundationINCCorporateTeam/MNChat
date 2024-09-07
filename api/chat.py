@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Initialize the chatbot
-chatbot = pipeline('conversational', model='facebook/blenderbot-400M-distill')
+chatbot = pipeline('text-generation', model='google/gemma-2-2b-it')
 
 @app.route('/chat', methods=['POST'])
 def chat():
