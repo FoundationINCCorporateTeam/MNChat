@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: chat-widget
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+    startCommand: |
+      python api/chat.py
+    routes:
+      - src: /chat
+        dest: /api/chat.py
